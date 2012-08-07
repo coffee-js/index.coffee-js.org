@@ -11,6 +11,7 @@ html
     script(type='text/coffeescript', src='h.coffee')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
     script(src='http://jashkenas.github.com/coffee-script/extras/coffee-script.js')
+    meta(charset='utf-8')
   body
     #nav
       .home CoffeeScript
@@ -21,17 +22,17 @@ html
       .projects Projects
       .editor Editor
       .talk Talks
-      .chat Chat
+      .comment Comment
     #article
       .home
         :markdown
           Home
           http://coffeescript.org
 
-          The CoffeeScript Wiki 
+          The CoffeeScript Wiki
           https://github.com/jashkenas/coffee-script/wiki 
 
-          CoffeeScript In The Wild 
+          CoffeeScript In The Wild
           https://github.com/jashkenas/coffee-script/wiki/In-The-Wild 
 
           NodeTuts in Coffeescript 
@@ -56,7 +57,10 @@ html
           http://news.ycombinator.com/item?id=1014080
 
           CoffeeScript as a JS/Next / ES.next 
-            http://lanyrd.com/2011/jsconf/sfgdf/ 
+          http://lanyrd.com/2011/jsconf/sfgdf/
+
+          List of languages that compile to JS
+          https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS
 
       .slide
         :markdown
@@ -70,7 +74,7 @@ html
           CoffeeScript – Hijacking JavaScript
           http://naehrstoff.github.com/coffee-script-talk-2012/#slide-title
 
-          Functional programming in JavaScript ecosystem 
+          Functional programming in JavaScript ecosystem
           https://speakerdeck.com/u/paulmillr/p/functional-programming-in-javascript-ecosystem
 
       .video
@@ -121,11 +125,11 @@ html
           http://www.codethinked.com/a-case-for-using-coffeescript
 
           CoffeeScript for Rubyists [18:52]
-          http://www.youtube.com/watch?v=EOpG-yqMfHE  
-          http://www.tudou.com/programs/view/StjdUh_exHQ/  
+          http://www.youtube.com/watch?v=EOpG-yqMfHE
+          http://www.tudou.com/programs/view/StjdUh_exHQ/
 
           A Shot of Coffee Script [31:28]
-          http://www.youtube.com/watch?v=fdNJiYQ1esc  
+          http://www.youtube.com/watch?v=fdNJiYQ1esc
           http://www.tudou.com/programs/view/gkDzTCECo_c/
 
           CoffeeScript on Windows [02:49]
@@ -153,7 +157,7 @@ html
           InfoQ: CoffeeScript: Good, Bold, and with Sugar 
           http://www.infoq.com/presentations/CoffeeScript-Good-Bold-and-with-Sugar
 
-      .guide Guide
+      .guide
         :markdown
           The Little Book on CoffeeScript 
           http://arcturo.github.com/library/coffeescript/index.html
@@ -173,7 +177,7 @@ html
           The Problem with Implicit Scoping in CoffeeScript 
           http://lucumr.pocoo.org/2011/12/22/implicit-scoping-in-coffeescript/
 
-      .blogs Blogs
+      .blogs
         :markdown
           Making Macros in CoffeeScript 
           http://blog.davidpadbury.com/2010/12/09/making-macros-in-coffeescript/
@@ -188,7 +192,7 @@ html
           http://ryanflorence.com/2011/2012/case-against-coffe
 
           defer: Taming asynchronous javascript with CoffeeScript 
-          http://gfxmonk.net/2010/07/04/defer-taming-asynchronous-javascript-with-coffeescript.html  
+          http://gfxmonk.net/2010/07/04/defer-taming-asynchronous-javascript-with-coffeescript.html
           https://github.com/jashkenas/coffee-script/pull/1942
 
           CoffeeScript, Whitespace, and Coffee 
@@ -270,8 +274,11 @@ html
           Why Should You Use CoffeeScript -- Shellex 
           http://shellex.info/why-should-you-use-coffeescript
 
-      .projects Projects
+      .projects
         :markdown
+          CoffeeScript Wiki: In The WildNew Page
+          https://github.com/jashkenas/coffee-script/wiki/In-The-Wild
+
           CoffeeScript's port of the Scheme's Metacircular Evaluator 
           http://dmitrysoshnikov.com/scheme-on-coffee/ 
 
@@ -432,7 +439,7 @@ html
           Emacs Major Mode for CoffeeScript 
           https://github.com/defunkt/coffee-mode
 
-      .talk Talks
+      .talk
         :markdown
           Google Groups 列表 
           https://groups.google.com/forum/?hl=en#!forum/coffeescript 
@@ -452,7 +459,7 @@ html
           新浪微群 
           http://q.weibo.com/948286
 
-      .chat Chat
+      .comment
         div#disqus_thread
         script
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

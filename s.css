@@ -8,18 +8,16 @@ body {
   line-height: 20px;
 }
 a {
-  color: #7575f0;
+  color: #66f;
   opacity: 0.6;
-  background: #fafafa;
-  white-space: nowrap;
-}
-a:link {
   text-decoration: none;
   font-family: 'wenquanyi micro hei mono', monospace;
   font-size: 14px;
-  padding: 0px 4px;
-  margin: 0px 4px;
-  box-shadow: 0px 0px 8px #d1d1fa;
+  display: block;
+  max-width: 600px;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
 }
 #nav {
   position: fixed;
@@ -80,7 +78,7 @@ pre {
   background: #cfd6fc;
   box-shadow: 0px 1px 10px #cfd6fc;
 }
-.chat {
+.comment {
   background: #f8ecfe;
   box-shadow: 0px 1px 10px #f8ecfe;
 }
