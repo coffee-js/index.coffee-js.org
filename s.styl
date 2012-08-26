@@ -1,37 +1,42 @@
 
 *
   box-sizing border-box
+  -webkit-transition-duration 0.4s
+  -mox-transition-duration 0.4s
+  transition-duration 0.4s
 
 body
   margin 0px
   font-family 'Lato', sans-serif
-  font-weight 500
   line-height 20px
+  font-weight lighter
+  background hsl(0,0,95)
+  -webkit-transition-duration 0.4s
 
 a
-  color hsl(240,100,70)
+  color hsl(240,100,89)
   opacity 0.6
   text-decoration none
   font-family 'wenquanyi micro hei mono', monospace
   font-size 14px
   display block
-  max-width 600px
-  text-overflow ellipsis
-  overflow-x hidden
+  width 0px
+  overflow-x visible
   white-space nowrap
-  
-#nav
-  position fixed
-  top 10%
-  line-height 30px
-  font-size 24px
-  font-weight 300
-  width 200px
 
-#nav > div
-  padding 2px 6px
-  margin 8px
+  &:hover
+    color blue
+
+.title
+  letter-spacing 1px
+  padding 6px 12px
   border-radius 4px
+  color hsl(0,0,80)
+  text-overflow ellipsis
+  font-size 24px
+  font-weight 500
+  position fixed
+  left 0px
 
 #article
   width 100%
@@ -40,36 +45,39 @@ a
 #article > div
   width 100%
   min-height 100%
-  padding 80px 40px 200px 300px
+  padding 80px 140px 200px 250px
+  overflow-x hidden
+
+  &:hover
+    background white
+
+    .title
+      background white
+      color hsl(0,0,40)
 
 pre
-  background hsl(0,50,60)
   color white
-  padding 6px
-
-
-paint(a, b)
-  background hsl(a, 90, b)
-  box-shadow 0px 1px 10px hsl(a, 90, b)
+  background hsl(0,0,80)
+  padding 2px 8px
 
 .home
-  paint 240 100
+  top 100px
 .slide
-  paint 270 95
+  top 150px
 .video
-  paint 340 91
+  top 200px
 .guide
-  paint 30 85
+  top 250px
 .blogs
-  paint 80 80
+  top 300px
 .projects
-  paint 130 86
+  top 350px
 .editor
-  paint 0 80
+  top 400px
 .talk
-  paint 230 90
+  top 450px
 .comment
-  paint 280 96
+  top 500px
 
 ::-webkit-scrollbar
   width 4px

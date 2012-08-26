@@ -10,29 +10,25 @@ html
       )
     script(type='text/coffeescript', src='h.coffee')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
-    script(src='http://jashkenas.github.com/coffee-script/extras/coffee-script.js')
+    //- script(src='http://jashkenas.github.com/coffee-script/extras/coffee-script.js')
     meta(charset='utf-8')
     link(
       rel="shortcut icon",
       href="http://coffeescript.org/documentation/images/favicon.ico"
       )
+    script(src='h.js')
+    script(src='http://192.168.1.117:8072/doodle.js')
   body
-    #nav
-      .home CoffeeScript
-      .slide Slides
-      .video Videos
-      .guide Guides
-      .blogs Blogs
-      .projects Projects
-      .editor Editor
-      .talk Talks
-      .comment Comments
     #article
       .home
+        .title.home CoffeeScript
         :markdown
 
-          Home
+          CoffeeScript.org
           http://coffeescript.org
+
+          Github: CoffeeScript
+          https://github.com/jashkenas/coffee-script
 
           The CoffeeScript Wiki
           https://github.com/jashkenas/coffee-script/wiki 
@@ -40,7 +36,7 @@ html
           CoffeeScript In The Wild
           https://github.com/jashkenas/coffee-script/wiki/In-The-Wild 
 
-          NodeTuts in Coffeescript 
+          NodeTuts in CoffeeScript 
           http://jaigouk.com/nodetuts-coffeescript/ 
 
           text/coffeescript 
@@ -68,6 +64,7 @@ html
           https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS
 
       .slide
+        .title.slide Slides
         :markdown
 
           This presentation is an HTML5 website 
@@ -83,6 +80,7 @@ html
           https://speakerdeck.com/u/paulmillr/p/functional-programming-in-javascript-ecosystem
 
       .video
+        .title.video Videos
         :markdown
 
           另一个帖子里面放了几段, 后面来的继续粘贴 
@@ -111,10 +109,10 @@ html
           GoRuCo 2011 - Jeremy Ashkenas - CoffeeScript for the Well-Rounded Rubyist 
           http://vimeo.com/27200146
 
-          Introduction to Coffeescript and Node.js, by Pedro Teixeira 
+          Introduction to CoffeeScript and Node.js, by Pedro Teixeira 
           http://nodetuts.com/tutorials/16-introduction-to-coffeescript-and-nodejs.html#video 
 
-          Coffeescript creator talks at TimesOpen (估计手机拍摄，音质不行)
+          CoffeeScript creator talks at TimesOpen (估计手机拍摄，音质不行)
           http://www.youtube.com/watch?v=pqr7_cM8LhE 
 
           Get Started with CoffeeScript (在「Mac OS」安装以及使用「coffee-script」)
@@ -143,7 +141,7 @@ html
 
 
           Better JS with CoffeeScript - Sam Stephenson (37signals) 
-          http://vimeo.com/35258313   
+          http://vimeo.com/35258313
           http://www.tudou.com/programs/view/pg-PTg9Hcfc/
 
           CoffeeScript x Node.js - RSJS [40:18] 
@@ -163,6 +161,7 @@ html
           http://www.infoq.com/presentations/CoffeeScript-Good-Bold-and-with-Sugar
 
       .guide
+        .title.guide Guides
         :markdown
 
           CoffeeScript in the browser
@@ -190,6 +189,7 @@ html
           http://ruby-china.org/topics/4789
 
       .blogs
+        .title.blogs Blogs
         :markdown
           Making Macros in CoffeeScript 
           http://blog.davidpadbury.com/2010/12/09/making-macros-in-coffeescript/
@@ -287,6 +287,7 @@ html
           http://shellex.info/why-should-you-use-coffeescript
 
       .projects
+        .title.projects Projects
         :markdown
           CoffeeScript Wiki: In The WildNew Page
           https://github.com/jashkenas/coffee-script/wiki/In-The-Wild
@@ -343,7 +344,7 @@ html
           https://github.com/substance/substance
 
           Doppio is a project to get Java running in the browser without any plug-ins. 
-          A JVM in Coffeescript. 
+          A JVM in CoffeeScript. 
           http://int3.github.com/doppio/about.html 
           http://news.ycombinator.com/item?id=3913435
 
@@ -393,7 +394,7 @@ html
           skeleton: Express 3.0 framework-less app structure generator 
           https://github.com/EtienneLem/skeleton
 
-          A RESTful API for news.ycombinator.com written in Coffeescript for node.js 
+          A RESTful API for news.ycombinator.com written in CoffeeScript for node.js 
           https://github.com/Boxyco/hackernews-api
 
           Cash (WIP) 
@@ -416,58 +417,38 @@ html
           http://toolbox.no.de/categories/CoffeeScript%20Modules
 
       .editor
+        .title.editor Editor
         :markdown
 
           全面的可以看 Wiki 上给出的资源, 支持好多编辑器: 
           https://github.com/jashkenas/coffee-script/wiki/Text-editor-plugins 
 
-          新闻: VisualStutio 已经支持 Coffeescript 
+          VisualStutio 已经支持 CoffeeScript 
           http://www.infoq.com/news/2011/07/Web-Workbench  
 
           Vim 语法支持见 https://github.com/kchmck/vim-coffee-script  
-
+          Sublime Text 2 通过 Package Control 可以下载安装; Vim 用户自行下载 plugin.
           先访问 http://www.vim.org/scripts/script.php?script_id=3590 下载 zip 文件, 
           比如 vim-coffee-script-v001.zip , 注意版本可能不同, 
-          然后执行(注意文件名)
+          然后执行(注意文件名), 下一次打开 .coffee 文件就又高亮了. 
 
               unzip -od ~/.vim vim-coffee-script-v001.zip 
-
-          下一次打开 .coffee 文件就又高亮了. 
-
-          Sublime Text 2 我用的免费版本, 测试如下: 
-          具体看 https://github.com/jashkenas/coffee-script-tmbundle 
-          以此执行以下命令, 新建 
-
-              git clone https://github.com/jashkenas/coffee-script-tmbundle.git 
-              cd coffee-script-tmbundle/ 
-              zip -r CoffeeScript.sublime-package *
-
-          最后把生成的文件转移到安装目录的"Pristine Packages", 具体可能不同: 
-
-              mv CoffeeScript.sublime-package ../Pristine\ Packages/
-
-          这篇博客提到一些 Vim 使用技巧, 不过我还没配那个
 
           How to Write CoffeeScript Efficiently 
           http://esa-matti.suuronen.org/blog/2011/11/28/how-to-write-coffeescript-efficiently/
 
-          This project adds CoffeeScript syntax highlighting to the gedit text editor.   
+          This project adds CoffeeScript syntax highlighting to the gedit text editor.
           (and any other gtksourceview compliant text editor)  
           https://github.com/wavded/gedit-coffeescript
 
           使用 Sublime Text 2 编辑 CoffeeScript, cnodejs 论坛帖子:
           http://club.cnodejs.net/topic/4f2b97b5aa8e490b110bed78
 
-          网上遇到个 ST2 不用手动 zip 的方法, Ubuntu 测试有用
-          http://elegantcode.com/2011/08/05/moving-from-e-texteditor-to-sublime-text-2/ 
-
-              $ cd ~/.config/sublime-text-2/Packages 
-              $ git clone git://github.com/jashkenas/coffee-script-tmbundle CoffeeScript
-
           Emacs Major Mode for CoffeeScript 
           https://github.com/defunkt/coffee-mode
 
       .talk
+        .title.talk Talks
         :markdown
 
           Google Groups
@@ -489,6 +470,7 @@ html
           http://q.weibo.com/948286
 
       .comment
+        .title.comment Comments
         div#disqus_thread
         script
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

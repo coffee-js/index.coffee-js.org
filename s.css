@@ -1,36 +1,41 @@
 * {
   box-sizing: border-box;
+  -webkit-transition-duration: 0.4s;
+  -mox-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 body {
   margin: 0px;
   font-family: 'Lato', sans-serif;
-  font-weight: 500;
   line-height: 20px;
+  font-weight: lighter;
+  background: #f2f2f2;
+  -webkit-transition-duration: 0.4s;
 }
 a {
-  color: #66f;
+  color: #c7c7ff;
   opacity: 0.6;
   text-decoration: none;
   font-family: 'wenquanyi micro hei mono', monospace;
   font-size: 14px;
   display: block;
-  max-width: 600px;
-  text-overflow: ellipsis;
-  overflow-x: hidden;
+  width: 0px;
+  overflow-x: visible;
   white-space: nowrap;
 }
-#nav {
-  position: fixed;
-  top: 10%;
-  line-height: 30px;
-  font-size: 24px;
-  font-weight: 300;
-  width: 200px;
+a:hover {
+  color: #00f;
 }
-#nav > div {
-  padding: 2px 6px;
-  margin: 8px;
+.title {
+  letter-spacing: 1px;
+  padding: 6px 12px;
   border-radius: 4px;
+  color: #ccc;
+  text-overflow: ellipsis;
+  font-size: 24px;
+  font-weight: 500;
+  position: fixed;
+  left: 0px;
 }
 #article {
   width: 100%;
@@ -39,48 +44,47 @@ a {
 #article > div {
   width: 100%;
   min-height: 100%;
-  padding: 80px 40px 200px 300px;
+  padding: 80px 140px 200px 250px;
+  overflow-x: hidden;
+}
+#article > div:hover {
+  background: #fff;
+}
+#article > div:hover .title {
+  background: #fff;
+  color: #666;
 }
 pre {
-  background: #c66;
   color: #fff;
-  padding: 6px;
+  background: #ccc;
+  padding: 2px 8px;
 }
 .home {
-  background: #fff;
-  box-shadow: 0px 1px 10px #fff;
+  top: 100px;
 }
 .slide {
-  background: #f2e7fe;
-  box-shadow: 0px 1px 10px #f2e7fe;
+  top: 150px;
 }
 .video {
-  background: #fdd3e1;
-  box-shadow: 0px 1px 10px #fdd3e1;
+  top: 200px;
 }
 .guide {
-  background: #fbd9b6;
-  box-shadow: 0px 1px 10px #fbd9b6;
+  top: 250px;
 }
 .blogs {
-  background: #dbfa9e;
-  box-shadow: 0px 1px 10px #dbfa9e;
+  top: 300px;
 }
 .projects {
-  background: #bbfbc6;
-  box-shadow: 0px 1px 10px #bbfbc6;
+  top: 350px;
 }
 .editor {
-  background: #fa9e9e;
-  box-shadow: 0px 1px 10px #fa9e9e;
+  top: 400px;
 }
 .talk {
-  background: #cfd6fc;
-  box-shadow: 0px 1px 10px #cfd6fc;
+  top: 450px;
 }
 .comment {
-  background: #f8ecfe;
-  box-shadow: 0px 1px 10px #f8ecfe;
+  top: 500px;
 }
 ::-webkit-scrollbar {
   width: 4px;

@@ -1,5 +1,7 @@
 
-$('#nav').children().click (e) ->
-  clas = e.target.className
-  top = $("#article>.#{clas}").offset().top
-  $('body').animate scrollTop: top
+$ ->
+  $('.title').click (e) ->
+    classes = e.target.className
+    name = classes.split(' ')[1]
+    h = $("#article>.#{name}").offset().top
+    $("body").animate scrollTop: h
