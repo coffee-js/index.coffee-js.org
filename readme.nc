@@ -9,4 +9,4 @@ http://coffee-js.github.com/coffeescript.cn/
 
 得益于 TJ 大神的 Jade 和 Stylus, 代码组织起来非常轻松
 在 Jade 中直接用了 Markdown, 复杂的编辑也免掉了
-修改时注意安装 jade, stylus, markd, coffee-script 这几个模块
+修改时注意安装 jade, stylus, marked, coffee-script 这几个模块
