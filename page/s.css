@@ -1,22 +1,18 @@
 * {
   box-sizing: border-box;
-  -webkit-transition-duration: 0.4s;
-  -mox-transition-duration: 0.4s;
-  transition-duration: 0.4s;
 }
 body {
   margin: 0px;
   font-family: 'Lato', sans-serif;
   line-height: 20px;
   font-weight: lighter;
-  background: #f2f2f2;
-  -webkit-transition-duration: 0.4s;
+  background: #fafafa;
 }
 a {
   color: #c7c7ff;
   opacity: 0.6;
   text-decoration: none;
-  font-family: 'wenquanyi micro hei mono', monospace;
+  font-family: 'wenquanyi micro hei mono', monospace, 'Micosoft Yahei';
   font-size: 14px;
   display: block;
   width: 0px;
@@ -36,6 +32,7 @@ a:hover {
   font-weight: 500;
   position: fixed;
   left: 0px;
+  height: 40px;
 }
 #article {
   width: 100%;
@@ -46,12 +43,10 @@ a:hover {
   min-height: 100%;
   padding: 80px 140px 200px 250px;
   overflow-x: hidden;
-}
-#article > div:hover {
+  box-shadow: 0px 0px 20px #ccc;
   background: #fff;
 }
 #article > div:hover .title {
-  background: #fff;
   color: #666;
 }
 pre {
@@ -60,31 +55,31 @@ pre {
   padding: 2px 8px;
 }
 .home {
-  top: 100px;
+  top: 80px;
 }
 .slide {
-  top: 150px;
+  top: 120px;
 }
 .video {
-  top: 200px;
+  top: 160px;
 }
 .guide {
-  top: 250px;
+  top: 200px;
 }
 .blogs {
-  top: 300px;
+  top: 240px;
 }
 .projects {
-  top: 350px;
+  top: 280px;
 }
 .editor {
-  top: 400px;
+  top: 320px;
 }
 .talk {
-  top: 450px;
+  top: 360px;
 }
 .comment {
-  top: 500px;
+  top: 400px;
 }
 ::-webkit-scrollbar {
   width: 4px;
