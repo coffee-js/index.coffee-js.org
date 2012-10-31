@@ -19,6 +19,7 @@
     "coffee-script": "latest",
     "jade": "latest",
     "stylus": "latest",
-    "marked": "latest"
+    "marked": "latest",
+    "doodle": "latest"
   }
 }

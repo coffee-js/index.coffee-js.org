@@ -1,8 +1,31 @@
+mixin disqus
+  .comment
+    .title.comment Comments
+    div#disqus_thread
+    script
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'coffeescriptcn'; // required: replace example with your forum shortname
 
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    noscript
+      span Please enable JavaScript to view the
+      a(href="http://disqus.com/?ref_noscript") comments powered by Disqus
+    a(href="http://disqus.com",class="dsq-brlink")
+      span comments powered by
+      span(class="logo-disqus") Disqus
+
+doctype 5
 html
   head
     title Coffee
     link(rel='stylesheet',href='page/s.css')
+    //- script(src='http://192.168.1.104:7777/doodle.js')
+    script(src='page/h.js')
     link(
       href='http://fonts.googleapis.com/css?family=Lato:300,400',
       rel='stylesheet',
@@ -14,9 +37,10 @@ html
       href="http://coffeescript.org/documentation/images/favicon.ico"
       )
   body
+    #bg CoffeeScript
     #article
       .home
-        .title.home CoffeeScript
+        .title CoffeeScript
         :markdown
 
           CoffeeScript.org
@@ -59,7 +83,7 @@ html
           https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS
 
       .slide
-        .title.slide Slides
+        .title Slides
         :markdown
 
           CoffeeScript: JavaScript without the Fail
@@ -82,7 +106,7 @@ html
           https://github.com/janmonschke/Genetic-Algorithms
   
       .video
-        .title.video Videos
+        .title Videos
         :markdown
 
           另一个帖子里面放了几段, 后面来的继续粘贴 
@@ -163,7 +187,7 @@ html
           http://www.infoq.com/presentations/CoffeeScript-Good-Bold-and-with-Sugar
 
       .guide
-        .title.guide Guides
+        .title Guides
         :markdown
 
           CoffeeScript Cookbook
@@ -209,7 +233,7 @@ html
           https://leanpub.com/coffeescript-ristretto
 
       .blogs
-        .title.blogs Blogs
+        .title Blogs
         :markdown
           Making Macros in CoffeeScript 
           http://blog.davidpadbury.com/2010/12/09/making-macros-in-coffeescript/
@@ -325,7 +349,7 @@ html
           http://www.cnblogs.com/neutra/archive/2012/07/08/2581179.html
 
       .projects
-        .title.projects Projects
+        .title Projects
         :markdown
           CoffeeScript Wiki: In The WildNew Page
           https://github.com/jashkenas/coffee-script/wiki/In-The-Wild
@@ -460,8 +484,11 @@ html
           nanoScroller.js
           https://github.com/jamesflorentino/nanoScrollerJS
 
+          ClojureCoffeeScriptGame
+          https://github.com/danielribeiro/ClojureCoffeeScriptGame
+
       .editor
-        .title.editor Editor
+        .title Editor
         :markdown
 
           全面的可以看 Wiki 上给出的资源, 支持好多编辑器: 
@@ -489,7 +516,7 @@ html
           https://github.com/defunkt/coffee-mode
 
       .talk
-        .title.talk Talks
+        .title Talks
         :markdown
 
           Google Groups
@@ -522,26 +549,4 @@ html
           Issue: Allow dashes in identifiers, mangle them.
           https://github.com/jashkenas/coffee-script/pull/2370
 
-      .comment
-        .title.comment Comments
-        div#disqus_thread
-        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
-        //- script(src='http://jashkenas.github.com/coffee-script/extras/coffee-script.js')
-        script(src='page/h.js')
-        script(src='http://192.168.1.117:8072/doodle.js')
-        script
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'coffeescriptcn'; // required: replace example with your forum shortname
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        noscript
-          span Please enable JavaScript to view the
-          a(href="http://disqus.com/?ref_noscript") comments powered by Disqus
-        a(href="http://disqus.com",class="dsq-brlink")
-          span comments powered by
-          span(class="logo-disqus") Disqus
+      mixin disqus
