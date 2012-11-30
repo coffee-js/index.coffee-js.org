@@ -8,18 +8,19 @@ window.onload = ->
   body = document.body
   nav = all '.title'
 
+  now = (n) ->
+    if n? then window.scrollTo 0,n
+    else window.pageYOffset
+
   for elem in nav
     do (elem) ->
       elem.onclick = (e) ->
         top = elem.parentNode.offsetTop
-        now = (n) ->
-          if n? then body.scrollTop = n
-          else body.scrollTop
 
         do scoll = ->
           delay 10, ->
             if (Math.abs (top - now())) >= 300
-              show 'scrollTop'
+              # show 'scrollTop', top, now()
               if top > now()
                 now (now() + 300)
                 do scoll if top > now()
@@ -30,3 +31,4 @@ window.onload = ->
 
       elem.parentNode.onmouseover = ->
         query('#bg').innerText = elem.innerText
+        query('#bg').textContent = elem.textContent

@@ -1,12 +1,31 @@
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Lato.woff") format('woff');
+}
+@font-face {
+  font-family: 'Josefin-Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Josefin-Sans.woff") format('woff');
+}
+@font-face {
+  font-family: 'Josefin-Sans-SemiBold';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Josefin-Sans-SemiBold.woff") format('woff');
 }
 body {
   margin: 0px;
   font-family: 'Lato', sans-serif;
   line-height: 20px;
-  font-weight: lighter;
   background: #fafafa;
+  font-size: 16px;
 }
 a {
   color: #c7c7ff;
@@ -27,12 +46,10 @@ a:hover {
   padding: 6px 12px;
   border-radius: 4px;
   color: #ccc;
-  text-overflow: ellipsis;
   font-size: 24px;
-  font-weight: 500;
   position: fixed;
   left: 0px;
-  height: 34px;
+  font-family: 'Josefin-Sans-SemiBold';
 }
 #article {
   width: 100%;
@@ -45,6 +62,7 @@ a:hover {
   font-size: 300px;
   line-height: 300px;
   position: fixed;
+  font-family: "Josefin-Sans";
 }
 #article > div {
   width: 100%;

@@ -21,27 +21,26 @@ all = function(sign) {
 };
 
 window.onload = function() {
-  var body, elem, nav, _i, _len, _results;
+  var body, elem, nav, now, _i, _len, _results;
   body = document.body;
   nav = all('.title');
+  now = function(n) {
+    if (n != null) {
+      return window.scrollTo(0, n);
+    } else {
+      return window.pageYOffset;
+    }
+  };
   _results = [];
   for (_i = 0, _len = nav.length; _i < _len; _i++) {
     elem = nav[_i];
     _results.push((function(elem) {
       elem.onclick = function(e) {
-        var now, scoll, top;
+        var scoll, top;
         top = elem.parentNode.offsetTop;
-        now = function(n) {
-          if (n != null) {
-            return body.scrollTop = n;
-          } else {
-            return body.scrollTop;
-          }
-        };
         return (scoll = function() {
           return delay(10, function() {
             if ((Math.abs(top - now())) >= 300) {
-              show('scrollTop');
               if (top > now()) {
                 now(now() + 300);
                 if (top > now()) {
@@ -60,7 +59,8 @@ window.onload = function() {
         })();
       };
       return elem.parentNode.onmouseover = function() {
-        return query('#bg').innerText = elem.innerText;
+        query('#bg').innerText = elem.innerText;
+        return query('#bg').textContent = elem.textContent;
       };
     })(elem));
   }
