@@ -10,10 +10,10 @@ echo = (child, callback) ->
 make = (str) -> str.split " "
 
 queue = [
-  "jade -O ./ -wP src/index.jade"
-  "stylus -o page/ -w src/s.styl"
-  "coffee -o page/ -wbc src/h.coffee"
-  "doodle page/ index.html"
+  "jade -O #{__dirname}/ -wP src/index.jade"
+  "stylus -o #{__dirname}/page/ -w #{__dirname}/src/s.styl"
+  "coffee -o #{__dirname}/page/ -wbc #{__dirname}/src/h.coffee"
+  "doodle #{__dirname}/page/ #{__dirname}/index.html"
 ]
 
 split = (str) -> str.split " "
