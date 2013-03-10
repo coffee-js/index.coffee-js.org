@@ -97,20 +97,23 @@ pre {
 .guide .title {
   top: 200px;
 }
-.blogs .title {
+.discussion .title {
   top: 240px;
 }
-.projects .title {
+.blogs .title {
   top: 280px;
 }
-.editor .title {
+.projects .title {
   top: 320px;
 }
-.talk .title {
+.tools .title {
   top: 360px;
 }
-.comment .title {
+.talk .title {
   top: 400px;
+}
+.comment .title {
+  top: 440px;
 }
 ::-webkit-scrollbar {
   width: 4px;
